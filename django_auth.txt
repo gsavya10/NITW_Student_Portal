@@ -1,0 +1,16 @@
+Steps for migrating to Django's Auth System:-
+
+1. Delete all auth_* tables from DB.
+2. Delete users_groups, groups tables.
+3. Truncate django_migrations table
+4. Run migrate --fake-initial. Should fail at a foreign key exception. Ignore.
+5. Run migrate --fake studentdata 0003_auto_20181225_1533
+6. Run migrate 
+
+Changes made:-
+1. Removed managed=False from studentdata.Users model meta class. 
+2. Extended studentdata.Users from AbstractUser (Django's default)
+3. Added AUTH_USER_MODEL = 'studentdata.Users' to settings.py
+4. Altered model field studendata.Users.last_login from Integer to models.DateTimeField()
+5. Two migration files generated in studentdata app. 
+

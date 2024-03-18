@@ -1,0 +1,39 @@
+{% extends 'base.djt' %}
+
+{% block content %}
+    {% if error == 0 %}
+        <div  style=" height:1000px; width:15%;float:left;margin-left:40px;border-right:1px solid grey;">
+             <p style="font-size:20px;color:grey;text-align:center;">OPEN ELECTIVE PORTAL</p>
+             <nav>
+              <a href=""><button style="width:100%;margin-bottom:2px; background-color:white;border:none;color:red;outline:none;border-left:2px solid red; "> Instructions </button></a>
+              <a href="/openelective/prefer"><button style="width:100%;margin-bottom:2px; background-color:white;border:none;outline:none;"> Applications </button></a>
+              </nav>
+            </div>
+
+            <div style="font-size:18px; padding-left:20px;width:80%;float:left;">
+                <h3 class="text-primary"> &nbsp; Instructions <small>Must Read</small></h3>
+                <center><p>Your current CGPA is <strong>{{ cgpa }}</strong></p>
+                {% if allotted != 0 %}
+                    <p>You are allotted <strong>{{ allotted }}</strong> open elective course!</p></center>
+                {% else %}
+                    <p>Allotment is yet to be completed!</p></center>
+                {% endif %}
+                <h6>Instructions</h6>
+                <ul>
+                 <strong> <li>Each of the courses will be allotted to an approx of 70 students (one section). All the
+            students have to give their preferences in the application at the earliest. Allocation of
+            courses will be based on your latest available CGPA.</li>
+                    <li>It is compulsory to fill the Elective form on Student Portal to get the desired Course.
+                    In case any student fails to fill the form before the deadline, the default order displayed in the portal will
+                    be considered as your preference order and allotment will be done based on that.</li>
+                    <li>Instructions about filling the preferences are given in Application Tab,left sidebar. </li></strong>
+                </ul>
+            </div>
+        <div style="clear:both;"></div>
+    {% else %}
+        <p>{{error}}</p>
+    {% endif %}
+<script type="text/javascript">
+</script>
+
+{% endblock %}

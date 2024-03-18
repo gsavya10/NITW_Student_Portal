@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=1024">
+<meta name="description" content="Student Protal for students of NIT Warangal developed by WSDC">
+<meta name="author" content="WSDC">
+<head>
+	<title>WSDC Collect | OMAHA</title>
+	<link href="http://wsdc.nitw.ac.in/student/assets/css/bootstrap.min.css " rel="stylesheet">
+	<link href="http://wsdc.nitw.ac.in/student/assets/css/google.bootstrap.min.css " rel="stylesheet">
+	<link href="http://wsdc.nitw.ac.in/student/assets/css/offcanvas.css" rel="stylesheet">
+
+	<link href="http://wsdc.nitw.ac.in/student/assets/css/registration/offcanvas.css" rel="stylesheet">
+	<link href="http://wsdc.nitw.ac.in/student/assets/css/feedback/offcanvas.css" rel="stylesheet">
+
+		<link href="http://wsdc.nitw.ac.in/student/assets/css/registration/introjs.min.css " rel="stylesheet">
+	<link href="http://wsdc.nitw.ac.in/student/assets/css/registration/offcanvas.css " rel="stylesheet">
+
+</head>
+<body class="google" oncontextmenu="return false;">
+	<!-- <div class="container-fluid"> -->
+	<div class="navbar navbar-fixed-top navbar-inverse hidden-print" role="navigation">
+		<div class="container">
+			<div class="row">	
+				<div class="col-md-2">
+					<div class="navbar-header google-header-img">
+						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+							<span class="sr-only">Toggle navigation</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+
+						<a class="navbar-brand" href="http://wsdc.nitw.ac.in/student/audit/home">
+							<img class="img" width="70px" src="http://wsdc.nitw.ac.in/student/assets/images/logo_wsdc.png" alt="wsdc_logo">
+						</a>
+					</div>
+				</div>
+				<div class="col-md-10 google-mobile">
+					<!-- Collect the nav links, forms, and other content for toggling -->
+					<div class="collapse navbar-collapse google-header-center navbar-ex1-collapse">
+												<ul class="nav navbar-nav navbar-right">
+							 <li class="google-main-menu" >
+								<a tabindex="0" role="button" data-toggle="popover" data-trigger="focus"  data-content='<div class="list-group">
+	<a href="http://wsdc.nitw.ac.in/student/audit/home" data-placement="bottom" class="list-group-item tips " title="Academic Audit : Results, Feedback, Registration">
+		Academic Audit
+	</a>
+	<a href="http://wsdc.nitw.ac.in/student/hostels" data-placement="bottom" class="list-group-item tips active"  title="Online Hostel Allotment">OMAHA</a>
+	
+	<a href="http://wsdc.nitw.ac.in/student/apps/radio" class="list-group-item tips " title="College LAN Radio">LAN Radio</a>
+	<a href="http://wsdc.nitw.ac.in/student/bechde" target="_blank" class="list-group-item tips " title="BechDe - NITW Buy and Sell">Bech De - Buy and Sell</a>
+
+	<a href="http://wsdc.nitw.ac.in/student/apps/hubs" class="list-group-item tips " title="DC++ HUbs">Hubby - DC++ Hub Detect</a>
+	<a href="http://mail.google.com/a/student.nitw.ac.in" target="_blank" class="list-group-item tips " title="NIT Warangal Mail">Student Webmail</a>
+	<!-- <a href="http://www.overknighters.com/eventhub/" target="_blank" class="list-group-item tips " title="Event Hub">Event Hub</a> -->
+<!-- 	<a href="http://wsdc.nitw.ac.in/student/upload/materials" target="_blank" class="list-group-item tips " title="Class Cloud">Class Cloud</a> -->
+	<!-- <a href="http://goo.gl/forms/vgb2GMlYXL" target="_blank" class="list-group-item tips " title="NIT Warangal Mail Forgot Password">Student Webmail Forgot Password</a> -->
+</div>' data-html=true  data-placement="bottom" id="navpop">
+									<span class="glyphicon glyphicon-th-large"></span>
+								</a>
+							 </li>
+							
+							<li class="dropdown">
+								<a href="#" class="dropdown-toggle google-name-email" data-toggle="dropdown">
+									SIDDHANT CHAWLA									<br/>
+									<small>siddhant.chawla9@gmail.com</small>
+									<!-- <span class="glyphicon glyphicon-cog"></span> -->  <b class="caret"></b> &nbsp;
+								</a>
+								<ul class="dropdown-menu">
+									<li><a href="http://wsdc.nitw.ac.in/student/audit/profile"><span class="glyphicon glyphicon-user"></span> My Profile </a> </li>
+									<li><a href="http://wsdc.nitw.ac.in/student/auth/change_password"><span class="glyphicon glyphicon-barcode"></span> Change Password</a> </li>
+									<li><a href="http://wsdc.nitw.ac.in/student/auth/logout"><span class="glyphicon glyphicon-off"></span> Logout</a> </li>
+								</ul>
+							</li>
+							<li class="google-profile-img hidden-xs hidden-print">
+								<!-- <a class="google-profile-img-container" href="http://wsdc.nitw.ac.in/student/profile"> -->
+								<img src="http://wsdc.nitw.ac.in/student/assets/upload/thumbs/931748.jpg" alt="profil_img" class="img img-rounded img-responsive" width="50px" height="50px">
+								<!-- </a>		 -->
+							</li>
+
+						</ul>
+					</div>	
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="clearfix">
+		<br>
+	</div>
+	<div class="container">
+  
+  <div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2 hidden-print sidebar" role="navigation">
+      <ul class="list-group">
+        <li class="list-group-header">OMAHA Payments</li>
+        <li class="list-group-item ">
+         <a href="http://wsdc.nitw.ac.in/student/hostels">
+          OMAHA Home
+        </a>
+      </li>
+      <li class="list-group-item ">
+        <a href="http://wsdc.nitw.ac.in/student/hostels/rules/winter">Payment Instructions</a>
+      </li>
+      <li class="list-group-item active">
+        <a href="http://wsdc.nitw.ac.in/student/hostels/wsdc_collect">
+          WSDC Collect
+        </a>
+      </li>
+            <li class="list-group-item active">
+        <a href="http://wsdc.nitw.ac.in/student/hostels/faq">
+          Frequently asked questions &nbsp; &nbsp; 
+        </a>
+      </li>
+<!--    <li class="list-group-item ">
+        <a href="http://wsdc.nitw.ac.in/student/hostels/getMessbill">
+          Mess bills &nbsp; &nbsp; <span class="label label-danger">new</span>
+        </a>
+      </li>
+      <li class="list-group-item ">
+        <a href="http://wsdc.nitw.ac.in/student/hostels/summermess">
+          Summer mess application &nbsp; &nbsp; <span class="label label-danger">new</span>
+        </a>
+      </li>
+    
+ <li class="list-group-item ">
+        <a href="http://wsdc.nitw.ac.in/student/hostels/hostel_slip">
+          Room Allotment Slip
+        </a>
+      </li> 
+       <li class="list-group-item ">
+        <a href="http://wsdc.nitw.ac.in/student/hostels/no_dues">
+          No Dues Certificate <br> <small>(Winter Session)</small>
+        </a>
+      </li>-->
+      
+    </ul>
+<!--
+    <ul class="list-group">
+      <li class="list-group-header">Odd Semester Roommate Request 2017</li>
+      <li class="list-group-item">
+            </li>
+      <li class="list-group-item">
+        <a href="http://wsdc.nitw.ac.in/student/roommaterequest/mygroup/instructions">RMR Instructions</a>
+      </li>
+
+      <li class="list-group-item">
+        <a href="http://wsdc.nitw.ac.in/student/roommaterequest/mygroup">My Group</a>
+      </li>
+     <li class="list-group-item">
+      <a href="http://wsdc.nitw.ac.in/student/roommaterequest/requestsin">Received Requests<span class="badge noreq"></span></a>
+      </li>
+    </ul>
+-->  </div>
+  <div class="clearfix visible-xs hidden-print"></div>
+  <div class="col-sm-9 col-md-10 main">
+    <!-- <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main"> -->
+<!-- <h3 class="text-primary"> &nbsp; WSDC Collect <small>(Intra/inter Bank transfer or NEFT transactions)</small></h3> -->
+<!-- Waring messages !! -->
+<!-- <div class="alert alert-danger">
+  <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+  Tuition fees NEFT transactions are removed.
+</div>
+<div class="alert alert-warning">
+  <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+  WSDC Collect is not for State bank collect (former i-collect) transactions. Only NEFT or Intra/Inter bank transactions must be entered.
+</div> -->
+<!--NEFT/DD payment detail collection  modal START -->
+<!-- Nav tabs -->
+<ul class="nav nav-tabs" role="tablist">
+  <li class="active"><a href="#neftInstructionsTab" role="tab" data-toggle="tab">Instructions</a></li>
+  <li><a id = "nextBtnClicked" href="#hostelFormTab" role="tab" data-toggle="tab"><b>Hostel Fee Upload</a></b></li>
+  <li><a id = "nextBtnClicked1" href="#TutionFormTab" role="tab" data-toggle="tab"><b>Tution Fee Upload</a></b></li>
+</ul>
+
+<!-- Tab panes -->
+<div class="tab-content">
+  <div class="tab-pane active text-justify" id="neftInstructionsTab">
+    <!--instructions goes here-->
+    <h5>Please read the instructions below very carefully:</h5>
+    <ol>
+      <li>You are allowed to upload details for more than one NEFT/SBI-Collect transaction i.e you can submit this form more than once but do not submit twice for same NEFT/SBI-Collect transfer</li>
+      <li>You have to submit separate details for each NEFT/SBI_Collect.</li>
+      <li>Do not mix-up <strong>tuition fees</strong> with <strong>hostel/mess</strong> charges. Submit separate forms for both<b>(ON SEPERATE TABS).</b></li>
+      <!-- <li><span class="label label-danger">new</span>Do not upload tuition fees. Even if you have uploaded, need not to worry.</li> -->
+      <!-- <li>Select payment category as <strong>Chief warden</strong> for mess and hostel charges</li> -->
+      <li>Please decompose your NEFT/SBI-Collect transaction amount and put decomposed amounts in appropriate fields.</li>
+      <li>Each field should be filled with appropriate amount. Fields which are not applicable leave it as ‘0’.</li>
+      <li>Please make sure that auto-generated total amount field matches with the amount in your NEFT/SBI-Collect transaction slip.</li>
+      <li>Please upload a clear scanned/photographed copy of the NEFT/SBI-Collect bank transaction slip.</li>
+      <li>Only JPG format images are allowed</li>
+      <li>Please note that maximum allowed file size is 1MB (1024KB).</li>
+      <li>Do not upload/add invalid/incorrect NEFT/SBI-Collect transaction information. If invalid/incorrect information is found allotment will be cancelled and heavy penalty will be imposed.</li>
+    </ol>
+    <p>
+      <strong>Example scenario:</strong><br> 
+      If you have made a NEFT/SBI-Collect transaction of 12000 as mess advance and 3500 as mess dues, write 12000 in mess advance and 3500 in mess dues box and you will see total amount automatically being calculated and updated in total amount box.
+    </p>
+    <div class="row">
+      <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+      <button id = "neftModalStatus" class = "btn btn-success btn-lg btn-block" data-toggle="modal" data-target="#neftDdModalStatus">Check Hostel Fees Upload Status</button>
+        
+      </div>
+
+       <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+      <button id = "tutionModalStatusbtn" class = "btn btn-success btn-lg btn-block" data-toggle="modal" data-target="#tutionModalStatus">Check Tuition Fee Upload Status</button>
+        
+      </div>
+      <!-- <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+        <button id= "neftNextBtn" type="button" class="btn btn-primary btn-lg btn-block">Next Step (Not for i-collect)</button>
+      </div> -->
+    </div>
+  </div>
+
+  <div class="tab-pane" id="hostelFormTab">
+    <form id="neftForm" method="POST" class="form-horizontal" role="form" action="/registration/payment/">
+      {% csrf_token %}
+      <div class="alert alert-danger text-danger">
+        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+        <strong>Please enter the following details very carefully. Re-submission of these details are not allowed.</strong>
+      </div>
+      <div class="row">
+        <!--row 1-->
+        <div class="col-md-6 col-xs-12">
+          <!-- div[0]=neftMode -->
+          <div class="form-group">
+            <label for="neftMode" class="col-sm-4 control-label">Payment Mode</label>
+            <div class="col-sm-8">
+              <select id="neftMode" name="neftMode" class="form-control" required>
+                <option value="">--Select One--</option>
+                <option value="neft">NEFT</option>
+                <option value="icollect">I-Collect</option>
+                <option value="swift">Swift</option>
+
+                <!-- <option value="inter">Inter/Intra Bank transaction</option> -->
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="neftPayId" class="col-sm-4 control-label">Transaction ID</label>
+            <div class="col-sm-8">
+              <input type="text" name="neftPayId" class="form-control" id="neftPayId" required>
+              <div class="help-block text-justify">If you have more than one NEFT receipt/ Inter Bank transfer receipt, fill wsdc-collect multiple times for each transaction and fill the fee head accordingly. If the total amount in the image and total amount calculated is not matched, your transaction will be cancelled.</div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="neftPayDate" class="col-sm-4 control-label">Transaction Date</label>
+            <div style="padding-left:17px;" class="col-sm-7 col-md-8 input-group">
+              <input type="text" class="form-control" id="neftPayDate" required disabled>
+              <div id="neftDatePick" class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span>
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="neftCat" class="col-sm-4 control-label">Payment Category</label>
+            <div class="col-sm-8">
+              <select id="neftCat" class="form-control" required> 
+                <option value="">--Select One--</option>
+                <option value="1" selected>Chief Warden</option>
+                <!-- <option value="0">Fee account</option> -->
+              </select>
+            </div>
+          </div>
+        </div>
+        <!--row 2-->
+        <div class="col-md-6 col-xs-12">
+
+          <div class="form-group">
+            <label for="neftMessDue" class="col-sm-5 control-label">Mess Dues</label>
+            <div class="col-sm-7">
+              <input class="form-control neft-payments" type="number" class="form-control" id="neftMessDue" value="0" required>
+              <span class="help-block">Negative values are accepted</span>   
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="neftMessAdv" class="col-sm-5 control-label">Mess Advance</label>
+            <div class="col-sm-7">
+              <input class="form-control neft-payments" type="number" class="form-control" id="neftMessAdv" value="0" required>
+              <div class="help-block">Make sure you fill all the fee heads correctly</div>
+            </div>
+          </div>
+
+
+         <!--  <div class="form-group">
+            <label for="neftOthers" class="col-sm-5 control-label">Others</label>
+            <div class="col-sm-7">
+              <input class="form-control neft-payments" type="number" class="form-control" id="neftOthers" value="0" disabled>
+            </div>
+          </div> -->
+
+          <div class="form-group">
+            <label for="neftAmmnt" class="col-sm-5 control-label">Total Amount</label>
+            <div class="col-sm-7">
+              <input type="text" class="form-control" id="neftAmmnt" value="0" required disabled>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="neftFiles" class="col-sm-5 control-label">Upload Photo/Scanned</label>
+            <div class="col-sm-7">
+              <input type="file" class="form-control" name="neftFiles" id="neftFiles" required>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button id="neftSbmtfBtn" type="submit" class="submit" >Submit</button>
+    </form>
+    <!-- <div id="neftConfDiv" style="display:none;" class="col-md-6 col-xs-12 col-lg-6">
+      <legend>Please confirm the entered details. Click the submit button to proceed or click edit to edit these details.</legend>
+      <table id="neftConfTbl" class="table table-hover table-striped table-bordered">
+        <thead>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Payment Mode</strong>
+            </td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><strong>Transaction Id</strong>
+            </td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><strong>Transaction Date</strong>
+            </td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><strong>Payment Category</strong>
+            </td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><strong>Mess Due</strong>
+            </td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><strong>Mess Advance</strong>
+            </td>
+            <td></td>
+          </tr>
+         not neede for even sem registration 
+          <tr>
+            <td><strong>Seat Rent</strong>
+            </td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><strong>Maintenance Charges</strong>
+            </td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><strong>Electricity and Water Charges</strong>
+            </td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><strong>Fee Account</strong>
+            </td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><strong>Others</strong>
+            </td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><strong>Total Paid Amount</strong>
+            </td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><strong>File</strong>
+            </td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="progress" style="display:none;">
+        <div id="niftDDuploadProg" class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 0%;">
+          <span class="sr-only">45% Complete</span>
+        </div>
+      </div>
+      <div style = "display:none;" id = "progressGif">
+        <h5>Please do not refresh the page or press the back button after pressing the 'submit' button while your request is being processed</h5>
+        <h5>Page will automatically refresh after successful submission.</h5>
+        <img src="/student/assets/images/720.GIF">
+      </div>
+    </div> -->
+    <div class="clearfix"></div>
+    <div class="pull-right">
+      <!-- <button id="neftConfBtn" type="button" class="btn btn-primary btn-lg" onclick="neft_form_cnf()">Confirm Payment</button> -->
+      <button id="neftSbmtfBtn" style="display:none;" type="submit" class="btn btn-primary btn-large" >Submit</button>
+      <!-- <button id="neftEditfBtn" style="display:none;" type="button" class="btn btn-danger btn-large" onclick="neft_form_edit()">Edit</button> -->
+    </div>
+    
+    <!--NEFT/DD payment detail collection  modal END onclick="neft_form_sub()" -->
+  </div>
+
+
+  <div class="tab-pane" id="TutionFormTab">
+    <form method="POST" action = "/registration/payment" id="neftForm" class="form-horizontal"  role="form">
+      {% csrf_token %}
+      <div class="alert alert-danger text-danger">
+        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+        <strong>Please enter the following details very carefully. Re-submission of these details are not allowed.</strong>
+      </div>
+      <div class="row">
+        <!--row 1-->
+        <div class="col-md-6 col-xs-12">
+          <div class="form-group">
+            <label for="tutionMode" class="col-sm-4 control-label">Tution Payment Mode*</label>
+            <div class="col-sm-8">
+              <select id="tutionMode" class="form-control" required>
+                <option value="">--Select One--</option>
+                <option value="icollect">ICOLLECT</option>
+                <option value="neft">NEFT</option>
+                <option value="swift">Swift</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="tutionPayId" class="col-sm-4 control-label">Transaction ID*</label>
+            <div class="col-sm-8">
+              <input type="text" class="form-control" id="tutionPayId" required>
+              <div class="help-block text-justify">If you have more than one NEFT receipt/ Inter Bank transfer receipt, fill wsdc-collect multiple times for each transaction and fill the fee head accordingly. If the total amount in the image and total amount calculated is not matched, your transaction will be cancelled.</div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="tutionPayDate" class="col-sm-4 control-label">Transaction Date*</label>
+            <div style="padding-left:17px;" class="col-sm-7 col-md-8 input-group">
+              <input type="text" class="form-control" id="tutionPayDate" required disabled>
+              <div id="tutionDatePick" class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span>
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="tutionCat" class="col-sm-4 control-label">Payment Category*</label>
+            <div class="col-sm-8">
+              <select id="tutionCat" class="form-control" required >
+                <option value="">--Select One--</option>
+                <!-- <option value="1" >Chief Warden</option> -->
+                <option value="0" selected>Fee account</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <!--row 2-->
+        <div class="col-md-6 col-xs-12">
+          <div class="form-group">
+            <label for="tutionFee" class="col-sm-5 control-label">Tuition Fee(In Dollars or INR)*</label>
+            <div class="col-sm-7">
+              <input class="form-control tution-payments" type="number" class="form-control" id="tutionFee" value="0" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="tutionOthers" class="col-sm-5 control-label">Others(INR)</label>
+            <div class="col-sm-7">
+              <input class="form-control tution-payments" type="number" class="form-control" id="tutionOthers" value="0" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="tutionAmmnt" class="col-sm-5 control-label">Total Amount*</label>
+            <div class="col-sm-7">
+              <input type="text" class="form-control" id="tutionAmmnt" value="0" required disabled>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="tutionFiles" class="col-sm-7 control-label">Tuition Fee Receipt*</label>
+            <div class="col-sm-5">
+              <input type="file" class="form-control" id="tutionFiles" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="tutionFiles" class="col-sm-7 control-label">Conversion Rate if paid in INR(<b>For DASA students only</b>)/ Spring Spree/ Convocation</label>
+            <div class="col-sm-5">
+              <input type="file" class="form-control" id="tutionFiles1" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="tutionFiles" class="col-sm-7 control-label">Spring Spree/ Convocation</label>
+            <div class="col-sm-5">
+              <input type="file" class="form-control" id="tutionFiles2" required>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+    <div id="tutionConfDiv" style="display:none;" class="col-md-6 col-xs-12 col-lg-6">
+      <legend>Please confirm the entered details. Click the submit button to proceed or click edit to edit these details.</legend>
+      <table id="tutionConfTbl" class="table table-hover table-striped table-bordered">
+        <thead>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Payment Mode</strong>
+            </td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><strong>Transaction Id</strong>
+            </td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><strong>Transaction Date</strong>
+            </td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><strong>Payment Category</strong>
+            </td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><strong>Fee Account</strong>
+            </td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><strong>Others</strong>
+            </td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><strong>Total Paid Amount</strong>
+            </td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><strong>File1</strong>
+            </td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><strong>File2</strong>
+            </td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><strong>File3</strong>
+            </td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="progress" style="display:none;">
+        <div id="tutionUploadProg" class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 0%;">
+          <span class="sr-only">45% Complete</span>
+        </div>
+      </div>
+      <div style = "display:none;" id = "tutionprogressGif">
+        <h5>Please do not refresh the page or press the back button after pressing the 'submit' button while your request is being processed</h5>
+        <h5>Page will automatically refresh after successful submission.</h5>
+        <img src="/student/assets/images/720.GIF">
+      </div>
+    </div>
+    <div class="clearfix"></div>
+    <div class="pull-right">
+      <button id="tutionConfBtn" type="button" class="btn btn-primary btn-lg" onclick="tution_form_cnf()">Confirm Payment</button>
+      <button id="tutionSbmtfBtn" style="display:none;" type="submit" class="btn btn-primary btn-large" >Submit</button>
+      <button id="tutionEditfBtn" style="display:none;" type="button" class="btn btn-danger btn-large" onclick="tution_form_edit()">Edit</button>
+    </div>
+  </form>
+    <!--Tution payment detail collection  modal END  onclick="tution_form_sub()"-->
+  </div>
+
+</div>
+<!--NEFT/DD payment status  modal START -->
+<div id = "neftDdModalStatus" class="modal fade bs-example-modal-lg"  tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title">NEFT/Intra/Inter bank transaction Status</h4>
+      </div>
+      <div class="modal-body">
+                  <table class = "table table-hover table-striped table-bordered">
+            <thead>
+              <tr>
+                <th>Sl No.</th>
+                <th>Registration No.</th>
+                <th>Transaction ID</th>
+                <th>Transaction Date</th>
+                <th>Category</th>
+                <th>Mode</th>
+                <th>Amount</th>
+                <th>Files</th>
+                <th>Current Status</th>
+                <th>Remarks</th>
+              </tr>
+            </thead>
+            <tbody>
+                              <tr>
+                  <td>1</td>
+                  <td>931748</td>
+                  <td>DUA4854572</td>
+                  <td>23/12/2018</td>
+                  <td>Chief Warden</td>
+                    <td>I-collect</td>
+                      <td>Rs. 13663</td>
+                      <td>
+                        <a href = '/student/uploads/931748/DUA4854572.jpeg' target='_blank'>DUA4854572.jpeg</a>                      </td>
+                      <td>
+                        Sent to hostel office for verification                      </td>
+                      <td>
+                        None                      </td>
+                    </tr>
+                                      </tbody>
+                </table>
+                          </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div><!-- modal dialogu modal-lg-->
+      </div><!-- div modal close -->
+
+
+
+
+<div id = "tutionModalStatus" class="modal fade bs-example-modal-lg"  tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title">Tuition Fee Status</h4>
+      </div>
+      <div class="modal-body">
+                  <table class = "table table-hover table-striped table-bordered">
+            <thead>
+              <tr>
+                <th>Sl No.</th>
+                <th>Registration No.</th>
+                <th>Transaction ID</th>
+                <th>Transaction Date</th>
+                <th>Category</th>
+                <th>Mode</th>
+                <th>Amount</th>
+                <th>Files</th>
+                <th>Current Status</th>
+                <th>Remarks</th>
+              </tr>
+            </thead>
+            <tbody>
+                              <tr>
+                  <td>1</td>
+                  <td>931748</td>
+                  <td>DUA4856110</td>
+                  <td>23/12/2018</td>
+                  <td>Fee account</td>
+                    <td>I-collect</td>
+                      <td>Rs. 63000</td>
+                      <td>
+                        <a href = '/student/uploads/931748/DUA4856110.jpeg' target='_blank'>DUA4856110.jpeg</a>                      </td>
+                      <td>
+                        Transaction Confirmed / Receipt submitted                      </td>
+                      <td>
+                        None                      </td>
+                    </tr>
+                                      </tbody>
+                </table>
+                          </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div><!-- modal dialogu modal-lg-->
+      </div><!-- div modal close -->
+
+        </div> <!-- col-lg-8 or 10 -->
+    </div>      <!-- main row -->
+    <br>
+<!-- </div>  container in main/header.php -->
+</div> <!-- container close here -->
+<div class="row hidden-print well footer-well hidden-xs">
+  <div class="container">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+      <!-- <hr> -->
+      <footer>
+        <div class="row">
+        <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+          <strong>Quick Links</strong><br><br>
+          <ul type="square" style="margin-left:-1.5em">
+            <li><a href="http://www.nitw.ac.in" target="_blank">College main website </a></li>
+            <!-- <li><a href="http://www.nitw.ac.in/nitw/index.php/home/index.php?option=com_content&view=article&id=607" target="_blank">Fee structure 2014-15 </a></li> -->
+            <li><a href="http://mail.google.com/a/student.nitw.ac.in" target="_blank">Student Webmail</a></li>
+            <!-- <li><a href="http://www.nitw.ac.in/nitw/index.php?option=com_content&view=article&id=554&amp;Itemid=60" target="_blank">Department Websites</a></li> -->
+            <!-- <li><a href="http://www.nitw.ac.in/nitw/index.php/academics/rules" target="_blank">Rules and regulations</a></li> -->
+          </ul>
+        </div>
+        <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+          <strong>About Us</strong><br><br>
+          <address>
+            WSDC Office, <br>
+            Level 1, Center for Innovation & Incubation <br>
+            NIT Warangal, Telangana - 506004
+          </address>
+          Drop us an email on
+          <a href="mailto:wsdc.nitw@gmail.com">  <span class="glyphicon glyphicon-envelope"></span>  wsdc.nitw@gmail.com</a>
+        </div>
+        <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+          <strong>Follow us on Facebook</strong><br><br>
+          Stay in touch with WSDC, NIT Warangal</br>
+          <div class="fb-like" data-href="https://www.facebook.com/wsdc.nitw" data-layout="button" data-action="like" data-show-faces="false" data-share="true">
+          </div>
+          <br><br>
+          Read more at  <a href="http://wsdc.nitw.ac.in" target="_blank">wsdc.nitw.ac.in <span class="glyphicon glyphicon-new-window"></span></a>
+          <br>
+          <span class="glyphicon glyphicon-copyright-mark"></span> <a class="tips" title="Web & Software Development Cell, NIT Warangal" target="_blank" href="http://wsdc.nitw.ac.in/">2019 WSDC, NIT Warangal </a>
+        </div>
+      </div>
+
+    </footer>
+  </div>
+</div> <!-- footer container close here -->
+</div> <!-- /row with hidden print closes -->
+
+
+<script type="text/javascript" src="http://wsdc.nitw.ac.in/student/assets/js/jquery-1.11.1.min.js "></script>
+<script type="text/javascript" src="http://wsdc.nitw.ac.in/student/assets/js/bootstrap.min.js "></script>
+<!-- <script src=" "></script> -->
+<!--<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.28/angular.min.js" ></script> -->
+
+<script type="text/javascript" src="http://wsdc.nitw.ac.in/student/assets/js/offcanvas.js "></script>
+
+    <script type="text/javascript" src="http://wsdc.nitw.ac.in/student/assets/js/bootstrap-datepicker.js"></script>
+        <script type="text/javascript" src="http://wsdc.nitw.ac.in/student/assets/js/neft.js"></script>
+    <div id="fb-root"></div>
+<script type="text/javascript" src="http://wsdc.nitw.ac.in/student/assets/js/social.js "></script>
+</body>
+</html>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.28/angular.min.js" ></script>
+<script src="http://wsdc.nitw.ac.in/student/assets/js/registration/offcanvas.js"></script>
+<script src="http://wsdc.nitw.ac.in/student/assets/js/registration/constants.js"></script>
+<script src="http://wsdc.nitw.ac.in/student/assets/js/registration/alert.js "></script>
+<script src="http://wsdc.nitw.ac.in/student/assets/js/registration/registration_form.js "></script>
+<script src="http://wsdc.nitw.ac.in/student/assets/js/registration/slips.js"></script>
+<script src="http://wsdc.nitw.ac.in/student/assets/js/registration/intro.min.js"></script>
+<script src="http://wsdc.nitw.ac.in/student/assets/js/slip.js"></script>
+<script src="http://wsdc.nitw.ac.in/student/assets/js/offcanvas.js"></script>
+<script src="http://wsdc.nitw.ac.in/student/assets/js/home.js"></script>
+
+
+<script>
+$('#navpop').popover('hide');
+</script>
+
+
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-46078676-2', 'nitw.ac.in');
+ga('send', 'pageview');
+</script>

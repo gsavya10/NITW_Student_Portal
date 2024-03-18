@@ -1,0 +1,92 @@
+{% extends 'base.djt' %}
+
+{% block content %}
+
+{% for results, subjects, info, session in zipped_data %}
+
+<center><h4>Academic Result</h4></center>
+<table>
+<tr>
+	<td><b>Specialization</b></td>
+	<td>{{info.specialization}}</td>
+	<td><b>Branch</b></td>
+	<td>{{info.branch}}</td>
+</tr>
+<tr>
+	<td><b>Roll no.</b></td>
+	<td>{{results.regno}}</td>
+	<td><b>Semester</b></td>
+	<td>{{info.semester}}</td>
+</tr>
+<tr>
+	<td><b>Name</b></td>
+	<td>{{results.name}}</td>
+	<td><b>Exam Session</b></td>
+	<td>{{session.name}}</td>
+</tr>
+</table>
+
+<table>
+<thead>
+<tr>
+	<th>Sub.Code</th>
+	<th>Subject Name</th>
+	<th>Credit(s)</th>
+	<th>Grade</th>
+</tr>
+</thead>
+
+<tbody>
+{% if subjects.code1 %}
+<tr><td>{{subjects.code1}}</td><td>{{subjects.name1}}</td><td>{{subjects.credit1}}</td><td>{{results.grade1}}</td></tr>
+{% endif %}
+{% if subjects.code2 %}
+<tr><td>{{subjects.code2}}</td><td>{{subjects.name2}}</td><td>{{subjects.credit2}}</td><td>{{results.grade2}}</td></tr>
+{% endif %}
+{% if subjects.code3 %}
+<tr><td>{{subjects.code3}}</td><td>{{subjects.name3}}</td><td>{{subjects.credit3}}</td><td>{{results.grade3}}</td></tr>
+{% endif %}
+{% if subjects.code4 %}
+<tr><td>{{subjects.code4}}</td><td>{{subjects.name4}}</td><td>{{subjects.credit4}}</td><td>{{results.grade4}}</td></tr>
+{% endif %}
+{% if subjects.code5 %}
+<tr><td>{{subjects.code5}}</td><td>{{subjects.name5}}</td><td>{{subjects.credit5}}</td><td>{{results.grade5}}</td></tr>
+{% endif %}
+{% if subjects.code6 %}
+<tr><td>{{subjects.code6}}</td><td>{{subjects.name6}}</td><td>{{subjects.credit6}}</td><td>{{results.grade6}}</td></tr>
+{% endif %}
+{% if subjects.code7 %}
+<tr><td>{{subjects.code7}}</td><td>{{subjects.name7}}</td><td>{{subjects.credit7}}</td><td>{{results.grade7}}</td></tr>
+{% endif %}
+{% if subjects.code8 %}
+<tr><td>{{subjects.code8}}</td><td>{{subjects.name8}}</td><td>{{subjects.credit8}}</td><td>{{results.grade8}}</td></tr>
+{% endif %}
+{% if subjects.code9 %}
+<tr><td>{{subjects.code9}}</td><td>{{subjects.name9}}</td><td>{{subjects.credit9}}</td><td>{{results.grade9}}</td></tr>
+{% endif %}
+{% if subjects.code10 %}
+<tr><td>{{subjects.code10}}</td><td>{{subjects.name10}}</td><td>{{subjects.credit10}}</td><td>{{results.grade10}}</td></tr>
+{% endif %}
+{% if subjects.code11 %}
+<tr><td>{{subjects.code11}}</td><td>{{subjects.name11}}</td><td>{{subjects.credit11}}</td><td>{{results.grade11}}</td></tr>
+{% endif %}
+{% if subjects.code12 %}
+<tr><td>{{subjects.code12}}</td><td>{{subjects.name12}}</td><td>{{subjects.credit12}}</td><td>{{results.grade12}}</td></tr>
+{% endif %}
+{% if subjects.code13 %}
+<tr><td>{{subjects.code13}}</td><td>{{subjects.name13}}</td><td>{{subjects.credit13}}</td><td>{{results.grade13}}</td></tr>
+{% endif %}
+{% if subjects.code14 %}
+<tr><td>{{subjects.code14}}</td><td>{{subjects.name14}}</td><td>{{subjects.credit14}}</td><td>{{results.grade14}}</td></tr>
+{% endif %}
+</tbody>
+</table>
+
+<h4><b>Semester Grade Point Average (SGPA): </b>{{results.sgpa}}</h4>
+<h4><b>Cumulative Grade Point Average (CGPA): </b>{{results.cgpa}}</h4><br>
+<br>
+{% empty %}
+<h3>No results published yet.</h3>
+{% endfor %}
+
+{% endblock %}

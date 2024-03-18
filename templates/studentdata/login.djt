@@ -1,0 +1,315 @@
+{% load staticfiles %}
+
+<!doctype HTML>
+
+<html lang="EN">
+<head>
+	<meta charset="UTF-8">
+
+	<title>WSDC - Student Portal</title>
+	<meta name="description" content="Login Template">
+	<meta name="author" content="Saurabh Bodhe">
+	<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+    <meta content="width=device-width; initial-scale=1.0; maximum-scale=1.0;  user-scalable=0;" name="viewport">
+
+
+	<link rel="stylesheet" href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}">
+	<link rel="stylesheet" href="{% static 'css/semantic.css' %}">
+	<link rel="stylesheet" href="{% static 'css/styles.css' %}">
+
+	<script src="{% static 'assets/vendor/jquery/jquery.min.js' %}"></script>
+	<script src="{% static 'assets/vendor/bootstrap/js/bootstrap.min.js' %}"></script>
+	<script src="{% static 'semantic/semantic.min.js' %}"></script>
+
+</head>
+
+<body>
+	<div id="wrapper" class="ui two column divided stackable grid container">
+		<div class="column">
+				<div id="logo">
+					<img id="logo_img" class="ui centered image" src="{% static 'img/logo_wsdc.png' %}">
+					<h1>Student Portal</h1>
+				</div>
+		</div>
+		<div class="column">
+
+				<form method="post" role="form" enctype='multipart/form-data'>
+				{% csrf_token %}
+					<div id="login" class="ui center aligned container">
+						<h1>Welcome!</h1><br>
+						<input type="text" placeholder="username" name="username" required><br>
+						<input type="password" placeholder="password" name="passw" required><br>
+						<input type="submit" value="Login">
+					</div>
+				</form>
+					<a style="color: white;" href="" data-toggle="modal" data-target="#regModal">or Signup</a>
+					<a style="color: white;" href="" data-toggle="modal" data-target="#amnesiacModal"><p>or forgot password</p></a>
+		</div>
+	</div>
+
+
+		<div class="modal fade" id="amnesiacModal" role="dialog">
+		<div class="modal-dialog">
+  			<div class="modal-content">
+				<div class="ui grey message">
+	    			<div class="modal-header">
+	     				<button type="button" class="close" data-dismiss="modal">&times;</button>
+    	  				<h3 class="modal-title" style="text-align: center;">Reset Password</h3>
+					</div>
+    			</div>
+
+    			<div class="modal-body">
+					<form onsubmit="stopBtn();" method="post" action="/amnesiac/" role="form" enctype='multipart/form-data' class="ui form">
+					{% csrf_token %}
+							<div class="form-group ui raised segment">
+							<div class="row">
+								<div class="col-sm-6">
+									<div class="form-group">
+										<div class="ui labeled fluid small input">
+										  <div class="ui label">Username: </div>
+										  <input name='usrnm' type="text" class="" required>
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-6">
+								<div class="form-group">
+										<div class="ui labeled fluid small input">
+										  <div class="ui label">Registration Number: </div>
+										  <input name='regnum' type="text" class="" required>
+										</div>
+									</div>					
+								</div>
+							</div>
+						</div>
+						<center>
+							<div class="form-group">
+								<button class="ui blue button submitBtn" type="submit" name="submit">Submit</button>
+							</div>
+						</center>
+					</form>
+
+    			</div>
+
+  			</div> 
+		</div>
+		</div>
+
+
+		<div class="modal fade" id="regModal" role="dialog">
+		<div class="modal-dialog">
+  			<div class="modal-content">
+				<div class="ui grey message">
+	    			<div class="modal-header">
+	     				<button type="button" class="close" data-dismiss="modal">&times;</button>
+    	  				<h3 class="modal-title" style="text-align: center;">Sign Up</h3>
+					</div>
+    			</div>
+
+    			<div class="modal-body">
+					<form onsubmit="stopBtn();" method="post" action="/signup/" role="form" enctype='multipart/form-data' class="ui form">
+					{% csrf_token %}
+
+
+							<div class="form-group ui raised segment">
+							<div class="row">
+								<div class="col-sm-6">
+									<div class="form-group">
+										<div class="ui labeled fluid small input">
+										  <div class="ui label">Full Name: </div>
+										  <input name='fullname' pattern="[ A-Za-z]+" class="" required>
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-6">
+								<div class="form-group">
+										<div class="ui labeled fluid small input">
+										  <div class="ui label">Username: </div>
+										  <input name='username' type="text" class="" required>
+										</div>
+									</div>					
+								</div>
+							</div>
+
+							<div class="row">
+								<div class="col-sm-6">
+									<div class="form-group">
+										<div class="ui labeled fluid small input">
+											<div class="ui label">Password: </div>
+											<input id="password" name="password" type="password" class="" required>
+										</div>
+									</div>
+								</div>
+
+								<div class="col-sm-6">
+									<div class="form-group">
+										<div class="ui labeled fluid small input">
+											<div class="ui label">Repeat Password: </div>
+											<input id="repassword" name="repassword" type="password" required>
+										</div>
+									</div>
+								</div>
+							</div>
+
+						</div>
+
+						<div class="form-group ui raised segment">
+
+
+							<div class="row">
+								<div class="col-sm-6">
+									<div class="form-group">
+										<div class="ui labeled fluid small input">
+											<div class="ui label">Registration Number:</div> 
+											<input type="text" name = "regno" required>
+										</div>
+									</div>
+								</div>
+
+								<div class="col-sm-6">
+									<div class="form-group">
+										<div class="ui labeled fluid small input">
+											<div class="ui label">Roll Number: </div>
+											<input name="rollno" type="number" required>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="row">
+								<div class="col-sm-6">
+									<div class="form-group">
+										<div class="ui labeled fluid small input">
+											<div class="ui label">Email: </div>
+											<input name="email" type="email" required>
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-6">
+									<div class="form-group">
+										<div class="ui labeled fluid small input">
+											<div class="ui label">Mobile Number: </div>
+											<input name="mobileno" pattern="[ 0-9+]+" class="" required>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="row">
+								<div class="col-sm-6">
+									<div class="form-group">
+										<div class="ui labeled fluid small input">
+											<div class="ui label">Gender: </div>
+											<select name="gender" required>
+													<option class="" value="M">Male</option>
+													<option class="" value="F">Female</option>
+											</select>
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-6">
+									<div class="form-group">
+										<div class="ui labeled fluid small input">
+											<div class="ui label">Date of Birth: </div>
+											<input name='dob' id='dob' type="date" required>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<center>
+							<div class="form-group">
+								<button class="ui blue button submitBtn" type="submit" name="submit">Submit</button>
+							</div>
+						</center>
+					</form>
+
+    			</div>
+
+  			</div> 
+		</div>
+		</div>
+
+<script type="text/javascript">
+		if("{{ error }}" == 1)
+			alert("Incorrect Username/Password");
+		else if("{{ error }}" == 4)
+			alert("Account not activated");
+		else if("{{ error }}" == 2)
+		{
+			alert("Account already exists");
+			window.location.href = "/";
+		}
+		else if("{{ error }}" == 5)
+		{
+			alert("Incorrect username or registration number");
+			window.location.href = "/";		
+		}
+		else if("{{ error }}" == 3)
+			alert("Passwords did not match");
+		else if("{{ error }}" == 7)
+		{
+			alert("Failed to send email");
+			window.location.href = "/";			
+		}
+		else if("{{ error }}" == 99)
+			window.location.href = "/";			
+
+		if("{{ success }}" == 1)
+		{
+			alert("Account Created. Check email to activate");
+			window.location.href = "/";
+		}
+		else if("{{ success }}" == 2)
+		{
+			alert("Check email for password reset instructions.")
+			window.location.href = "/";
+		}
+
+		function stopBtn(element)
+		{
+			$('.submitBtn').addClass("disabled");
+		}
+
+		var now = new Date(),
+		    maxDate = now.toISOString().substring(0,10);
+
+		$('#dob').prop('max', maxDate);
+
+
+		$('#password').on('input', function() {
+			p1 = $('#password').val();
+			p2 = $('#repassword').val();
+
+		    if(p1 == p2)
+		    {
+		    	$('.submitBtn').removeClass('disabled');
+		    	$('.submitBtn').html('Submit');
+		    }
+		    else
+		    {
+			    $('.submitBtn').addClass('disabled');
+			    $('.submitBtn').html('Passwords do not match!');	
+		    }
+		});
+
+		$('#repassword').on('input', function() {
+		    
+			p1 = $('#password').val();
+			p2 = $('#repassword').val();
+
+		    if(p1 == p2)
+		    {
+		    	$('.submitBtn').removeClass('disabled');
+		    	$('.submitBtn').html('Submit');
+		    }
+		    else
+		    {
+			    $('.submitBtn').addClass('disabled');
+			    $('.submitBtn').html('Passwords do not match!');
+		    }
+		});
+</script>
+
+</body>
+</html>

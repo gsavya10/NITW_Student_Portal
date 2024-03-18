@@ -1,0 +1,153 @@
+{% extends 'base.djt' %}
+
+{% block content %}
+<div class="row">
+
+		
+		<!-- <div ng-if="slip.lists[key]['regApproved'] == 0" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+			<h2 style="text-align:center">PROVISIONAL REGISTRATION SLIP </h2><br><p align="center"></p>
+		</div> -->
+			<!-- <div ng-if="slip.lists[key]['regApproved'] == 1"><h2 style="text-align:center" > PROVISIONAL REGISTRATION SLIP </h2></p></div> -->	
+		{% for reg in registered %}
+		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+			<table class="table customised-table-condensed">
+				<tbody>
+					<tr>
+						<td><strong>Roll &nbsp:&nbsp</strong></td>
+						<td>{{request.user.get_student_data.roll_number}}</td>
+						<td><strong>Name &nbsp:&nbsp </strong></td>
+						<td>{{ request.user.first_name }} {{ request.user.middle_name }} {{ request.user.last_name }}</td>
+					</tr>
+					<tr>
+						<td><strong>Department &nbsp:&nbsp </strong></td>
+						<td>{{reg.dept_id}}</td>
+						<td><strong>Section &nbsp:&nbsp </strong></td>
+						<td>{{reg.section}}</td>
+					</tr>
+					<tr>
+						<td><strong>Specialization &nbsp:&nbsp </strong></td>
+						<td>{{reg.spec_id}}</td>
+						<td><strong>Semester &nbsp:&nbsp </strong></td>
+						<td>{{reg.semester}}</td>
+					</tr>
+				</tbody>
+			</table>
+			
+			<table class="table table-bordered table-condensed" ng-show="regularCourses.length">
+				<thead>
+					<th>#</th>
+					<th>Course Id</th>
+					<th>Course Name</th>
+					<th>Credit</th>
+					<th>Type</th>
+				</thead>
+				{% for courses in reg.courses %}
+				{% for course in courses %}
+
+				<tbody id = "countit">
+					<tr ng-repeat="course in  regularCourses=(slip.lists | filter :{backlog:CONSTANTS.REGULAR})" >
+						
+						<td class="count"></td>
+						<td>{{course.id}}</td>
+						<td>{{course.name}}</td>
+						<td id="san">{{course.credit}}</td>
+						<td>{{course.type}}</td>
+					</tr>
+					<script language="javascript" type="text/javascript">
+						var list = document.getElementsByClassName("count");
+						for (var i = 1; i <= list.length; i++) {
+						    list[i-1].innerHTML = i;
+						}
+					</script>
+					<script language="javascript" type="text/javascript">
+						var num = document.getElementById('countit').getElementsByTagName('td').getElementById('san');
+						var sum +=num;
+						document.getElementById('countit').innerHTML += '<tr><td>' + sum + '</td><td>total</td></tr>';
+					</script>
+				</tbody>
+				{% endfor %}
+				{% endfor %}
+
+				<tfoot>
+					<tr>
+						<td><strong>Total Credits [Study]</strong>&nbsp:&nbsp {{reg.sum}} </td>
+					</tr>
+					<tr>
+						<td><strong>Total Credits [Study+Exam]</strong>&nbsp:&nbsp {{reg.sum}}</td>
+					</tr>
+				</tfoot>
+			</table>
+			{% endfor %}
+
+			<!-- <h5 ng-show="backlogCourses.length"><b>Backlog</b></h5>
+
+			<table class="table table-bordered table-condensed" ng-show="backlogCourses.length">
+				<thead>
+					<th>#</th>
+					<th>Course Id</th>
+					<th>Course Name</th>
+					<th>Credit</th>
+					<th>Type</th>
+				</thead>
+				<tbody>
+					
+					</tr>
+				</tbody>
+			</table> -->
+
+			<!-- <table class="table customised-table-condensed">
+				<tbody>
+					<tr>
+						<td><strong>Total Credits [Study]</strong>&nbsp:&nbsp </td>
+					</tr>
+					<tr>
+						<td><strong>Total Credits [Study+Exam]</strong>&nbsp:&nbsp </td>
+					</tr>
+				</tbody>
+			</table> -->
+
+			<!-- <table class="table">
+				<tbody>
+					<tr>
+						<td><strong>Date</strong>&nbsp:&nbsp </td>
+					</tr>
+					<tr>
+						<td><strong>Remarks (if any)</strong>&nbsp:&nbsp</td>
+					</tr>
+				</tbody>
+			</table> -->
+			<br>
+			<div class="visible-print">
+			<!-- {{course.approved}} --><!--dev-->
+					
+										<table class="table">
+											<tbody>
+												<tr>
+													<td class="text-left">Signature of Student</td>
+													<td class="text-right">Signature of Faculty Advisor</td>
+                                                                                                        <td calss="text-right"> (      With Stamp    ) </td>
+												</tr>
+											</tbody>
+										</table>
+									
+				<!-- <table class="table">
+					<tbody>
+						<tr>
+							<td> 
+								<center>**No student will be permitted to the examinations of this semester without the Registration Slip signed by their respective faculty advisors</center>
+							</td>
+						</tr>
+						<tr>
+							<td> 
+								
+								<center> <br> <img src="http://wsdc.nitw.ac.in/student//assets/images/wsdc_logo.png" alt="WSDC" width="80px"><br><br> <span class="glyphicon glyphicon-copyright-mark"></span> 2018, WEB AND SOFTWARE DEVELOPMENT CELL, NITW</center>';
+								
+							</td>
+						</tr>
+					</tbody>
+				</table> -->
+			</div>
+		</div>
+	</div>
+
+{% endblock %}

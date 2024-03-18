@@ -1,0 +1,72 @@
+{% extends 'base.djt' %}
+
+{% block content %}
+
+    <div style="text-align: center;" class="alert alert-info alert-dismissable show">
+        <button type="button" class="close" data-dismiss="alert">&times;</button>
+        <p> Subjects having total classes as 0 are not yet entered by the concerned faculty. Labs are excluded from online attendance.</p>
+    </div>
+    <div class="ui container">
+            {% if error == 0 %}
+                    <center>
+
+                        <table class="ui striped celled structured collapsing single line unstackable raised table">
+                            <thead>
+                                <tr style="text-align: center;">
+                                    <th colspan="7">
+                                        <h4>Attendance Report of Regular Courses</h4>
+                                    </th>
+                                </tr>
+                                <tr style="text-align: center;">
+                                    <th>Course Code</th>
+                                    <th>Course Name</th>
+                                    <th>Mode</th>
+                                    <th>Classes Attended</th>
+                                    <th>Total Classes</th>
+                                    <th>Percentage</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for subject in attendance %}
+                                    <tr>
+                                    {% if subject.backlog == 0 %}
+                                        <td>{{subject.courseid}}</td>
+                                        <td>{{subject.name}}</td>
+                                        {% if subject.mode == 1 %}
+                                            <td>Study</td>
+                                        {% else %}
+                                            <td>Exam</td>
+                                        {% endif %}
+                                        <td>{{subject.attended}}</td>
+                                        <td>{{subject.total}}</td>
+                                    {% else %}
+                                        <td class="warning">{{subject.courseid}}</td>
+                                        <td class="warning">{{subject.name}}</td>
+                                        {% if subject.mode == 1 %}
+                                            <td class="warning">Study</td>
+                                        {% else %}
+                                            <td class="warning">Exam</td>
+                                        {% endif %}
+                                        <td class="warning">{{subject.attended}}</td>
+                                        <td class="warning">{{subject.total}}</td>
+                                    {% endif %}
+
+                                        {% if subject.total > 10 and subject.percent < limit %}
+                                            <td class="negative">{{subject.percent}}</td>
+                                        {% else %}
+                                            <td class="positive">{{subject.percent}}</td>
+                                        {% endif %}
+                                    </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </center>
+   
+            {% else %}
+
+                <p>{{error}}</p>
+
+            {% endif %}
+    </div>
+
+{% endblock %}

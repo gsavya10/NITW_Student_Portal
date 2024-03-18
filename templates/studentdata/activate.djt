@@ -1,0 +1,20 @@
+{% extends 'base.djt' %}
+
+{% block content %}
+
+<script type="text/javascript">
+	
+	if("{{ error }}" == 1)
+	{
+		alert("Already active");
+		window.location.href = "/";
+	}
+	else
+	{
+		alert("Activation Successful. Proceed to login.");
+		window.location.href = "/";
+	}
+
+</script>
+
+{% endblock %}

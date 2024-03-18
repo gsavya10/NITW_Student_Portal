@@ -1,0 +1,118 @@
+{% load staticfiles %}
+<!doctype HTML>
+
+<html lang="EN">
+<head>
+	<meta charset="UTF-8">
+
+	<title>WSDC - Student Portal</title>
+	<meta name="description" content="Main Template">
+	<meta name="author" content="Saurabh Bodhe">
+    <meta name="viewport" content="width=1024">
+
+    <link rel="stylesheet" href="{% static 'semantic/semantic.min.css' %}">
+	<link rel="stylesheet" href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}">
+	<link rel="stylesheet" href="{% static 'assets/vendor/font-awesome/css/font-awesome.min.css' %}">
+	<link rel="stylesheet" href="{% static 'assets/vendor/linearicons/style.css' %}">
+
+	<link rel="stylesheet" href="{% static 'assets/css/main.css' %}">
+	
+	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700" rel="stylesheet">
+
+	<script src="{% static 'assets/vendor/jquery/jquery.min.js' %}"></script>
+	<script src="{% static 'assets/vendor/bootstrap/js/bootstrap.min.js' %}"></script>
+	<script src="{% static 'assets/vendor/jquery-slimscroll/jquery.slimscroll.min.js' %}"></script>
+	<script src="{% static 'assets/vendor/chartist/js/chartist.min.js' %}"></script>
+	<script src="{% static 'assets/scripts/klorofil-common.js' %}"></script>
+	<script src="{% static 'semantic/semantic.min.js' %}"></script>
+</head>
+
+<body>
+
+	<div id="wrapper">
+		<!-- NAVBAR -->
+		<nav class="navbar navbar-default navbar-fixed-top">
+			<div class="brand">
+				<a href="/"><img src="{% static 'img/logo_wsdc.png' %}" style="height: 50px;" id="main_logo" alt="Logo"></a>
+			</div>
+
+
+			<div class="container-fluid">
+				{% if request.user.is_authenticated %}
+				<div class="navbar-btn">
+					<button type="button" class="btn-toggle-fullwidth"><i class="lnr lnr-arrow-left-circle"></i></button>
+				</div>
+				
+				
+				<div id="navbar-menu">
+					<ul class="nav navbar-nav navbar-right">
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle icon-menu" data-toggle="dropdown">
+								<i class="lnr lnr-alarm"></i>
+								<span class="badge bg-danger">1</span>
+							</a>
+							<ul class="dropdown-menu notifications">
+								<li><a href="#" class="notification-item"><span class="dot bg-warning"></span>System space is almost full</a></li>
+							</ul>
+						</li>
+						
+
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown"><img src="{% static 'assets/img/user.png' %}" class="img-circle" alt="Avatar"> <span>{{ request.user.first_name }}</span> <i class="icon-submenu lnr lnr-chevron-down"></i></a>
+							<ul class="dropdown-menu">
+								<li><a href="/editProfile/"><i class="lnr lnr-user"></i> <span>My Profile</span></a></li>
+								<li><a href="/changePassword/"><i class="lnr lnr-envelope"></i> <span>Change Password</span></a></li>
+								<li><a href="/logout/"><i class="lnr lnr-cog"></i> <span>Sign out</span></a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+				{% endif %}
+			</div>
+		</nav>
+		<!-- END NAVBAR -->
+
+		<!-- LEFT SIDEBAR -->
+
+		{% if request.user.is_authenticated %}
+		<div id="sidebar-nav" class="sidebar">
+			<div class="sidebar-scroll">
+				<nav>
+					<ul class="nav">
+						<li><a href="/" id="home"><i class="home icon"></i> <span>Home</span></a></li>
+						<li><a href="/registration/" id="registration"><i class="book icon"></i> <span>Registration</span></a></li>
+						<li><a href="/attendance/" id="attendance"><i class="calendar check icon"></i> <span>Semester Attendance</span></a></li>
+						<li><a href="/results/" id="results"><i class="chart line icon"></i> <span>Results</span></a></li>
+						<li><a href="#" id=""><i class="list alternate icon"></i> <span>Open Elective</span></a></li>
+						<li><a href="/feedback/" id="feedback"><i class="pencil alternate icon"></i> <span>Course End Feedback</span></a></li>
+						<li><a href="#" id=""><i class="lnr lnr-text-format"></i> <span>Exit Feedback</span></a></li>
+						<li><a href="#" id=""><i class="calendar alternate icon"></i> <span>Academic Calendar</span></a></li>
+						
+					</ul>
+				</nav>
+			</div>
+		</div>
+		<!-- END LEFT SIDEBAR -->
+		{% endif %}
+
+		<div class="main">
+			<div class="main-content">
+			{% block content %}{% endblock %}
+			</div>
+		</div>
+	</div>
+
+	<script type="text/javascript">
+		
+		var link = window.location.pathname;
+		link = link.replace("/", "");
+		link = link.replace("/", "");
+
+		if(link == "")
+			link = "home";
+
+		$('#' + link).addClass("active");
+
+	</script>
+</body>
+</html>

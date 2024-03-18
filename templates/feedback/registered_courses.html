@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=1024">
+<meta name="description" content="Student Protal for students of NIT Warangal developed by WSDC">
+<meta name="author" content="WSDC">
+<head>
+	<title>Academic Feedback</title>
+	<link href="http://wsdc.nitw.ac.in/student/assets/css/bootstrap.min.css " rel="stylesheet">
+	<link href="http://wsdc.nitw.ac.in/student/assets/css/google.bootstrap.min.css " rel="stylesheet">
+	<link href="http://wsdc.nitw.ac.in/student/assets/css/offcanvas.css" rel="stylesheet">
+
+	<link href="http://wsdc.nitw.ac.in/student/assets/css/registration/offcanvas.css" rel="stylesheet">
+	<link href="http://wsdc.nitw.ac.in/student/assets/css/feedback/offcanvas.css" rel="stylesheet">
+
+		<link href="http://wsdc.nitw.ac.in/student/assets/css/registration/introjs.min.css " rel="stylesheet">
+	<link href="http://wsdc.nitw.ac.in/student/assets/css/registration/offcanvas.css " rel="stylesheet">
+
+</head>
+<body class="google" oncontextmenu="return false;">
+	<!-- <div class="container-fluid"> -->
+	<div class="navbar navbar-fixed-top navbar-inverse hidden-print" role="navigation">
+		<div class="container">
+			<div class="row">	
+				<div class="col-md-2">
+					<div class="navbar-header google-header-img">
+						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+							<span class="sr-only">Toggle navigation</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+
+						<a class="navbar-brand" href="http://wsdc.nitw.ac.in/student/audit/home">
+							<img class="img" width="70px" src="http://wsdc.nitw.ac.in/student/assets/images/logo_wsdc.png" alt="wsdc_logo">
+						</a>
+					</div>
+				</div>
+				<div class="col-md-10 google-mobile">
+					<!-- Collect the nav links, forms, and other content for toggling -->
+					<div class="collapse navbar-collapse google-header-center navbar-ex1-collapse">
+												<ul class="nav navbar-nav navbar-right">
+							 <li class="google-main-menu" >
+								<a tabindex="0" role="button" data-toggle="popover" data-trigger="focus"  data-content='<div class="list-group">
+	<a href="http://wsdc.nitw.ac.in/student/audit/home" data-placement="bottom" class="list-group-item tips active" title="Academic Audit : Results, Feedback, Registration">
+		Academic Audit
+	</a>
+	<a href="http://wsdc.nitw.ac.in/student/hostels" data-placement="bottom" class="list-group-item tips "  title="Online Hostel Allotment">OMAHA</a>
+	
+	<a href="http://wsdc.nitw.ac.in/student/apps/radio" class="list-group-item tips " title="College LAN Radio">LAN Radio</a>
+	<a href="http://wsdc.nitw.ac.in/student/bechde" target="_blank" class="list-group-item tips " title="BechDe - NITW Buy and Sell">Bech De - Buy and Sell</a>
+
+	<a href="http://wsdc.nitw.ac.in/student/apps/hubs" class="list-group-item tips " title="DC++ HUbs">Hubby - DC++ Hub Detect</a>
+	<a href="http://mail.google.com/a/student.nitw.ac.in" target="_blank" class="list-group-item tips " title="NIT Warangal Mail">Student Webmail</a>
+	<!-- <a href="http://www.overknighters.com/eventhub/" target="_blank" class="list-group-item tips " title="Event Hub">Event Hub</a> -->
+<!-- 	<a href="http://wsdc.nitw.ac.in/student/upload/materials" target="_blank" class="list-group-item tips " title="Class Cloud">Class Cloud</a> -->
+	<!-- <a href="http://goo.gl/forms/vgb2GMlYXL" target="_blank" class="list-group-item tips " title="NIT Warangal Mail Forgot Password">Student Webmail Forgot Password</a> -->
+</div>' data-html=true  data-placement="bottom" id="navpop">
+									<span class="glyphicon glyphicon-th-large"></span>
+								</a>
+							 </li>
+							
+							<li class="dropdown">
+								<a href="#" class="dropdown-toggle google-name-email" data-toggle="dropdown">
+									Student Name									<br/>
+									<small>student@nitw.ac.in</small>
+									<!-- <span class="glyphicon glyphicon-cog"></span> -->  <b class="caret"></b> &nbsp;
+								</a>
+								<ul class="dropdown-menu">
+									<li><a href="http://wsdc.nitw.ac.in/student/audit/profile"><span class="glyphicon glyphicon-user"></span> My Profile </a> </li>
+									<li><a href="http://wsdc.nitw.ac.in/student/auth/change_password"><span class="glyphicon glyphicon-barcode"></span> Change Password</a> </li>
+									<li><a href="http://wsdc.nitw.ac.in/student/auth/logout"><span class="glyphicon glyphicon-off"></span> Logout</a> </li>
+								</ul>
+							</li>
+							<li class="google-profile-img hidden-xs hidden-print">
+								<!-- <a class="google-profile-img-container" href="http://wsdc.nitw.ac.in/student/profile"> -->
+								<img src="http://wsdc.nitw.ac.in/student/assets/upload/thumbs/.jpg" alt="profil_img" class="img img-rounded img-responsive" width="50px" height="50px">
+								<!-- </a>		 -->
+							</li>
+
+						</ul>
+					</div>	
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="clearfix">
+		<br>
+	</div>
+	<div class="container">
+<div class="row">
+  <div class="col-sm-4 col-md-2 hidden-print sidebar" role="navigation">
+    <ul class="list-group">
+      <li class="list-group-header">ACADEMIC SECTION</li>
+	<!-- for mess change option in future, Eligibility check-> $mess_change==1 , 
+    and li element with id=mess_change_option. No need of href for anchor tag. -->
+
+     
+      <li class="list-group-item ">
+        <a href="http://wsdc.nitw.ac.in/student/audit/home">Home</a>
+      </li>
+
+      <li class="list-group-item ">
+        <a href="http://wsdc.nitw.ac.in/student/audit/profile">Profile</a>
+      </li>
+      <li class="list-group-item ">
+        <a href="http://wsdc.nitw.ac.in/student/upload">Upload Profile Image</a>
+      </li>
+
+     <!--
+      <li class="list-group-item ">
+       <a href="http://wsdc.nitw.ac.in/student/ol_reg"><span style="color:orange;">Online Registration</span></a>
+      </li> -->
+
+      <li class="list-group-item ">
+       <a href="http://wsdc.nitw.ac.in/student/openElective">Open Elective</a>
+      </li>
+
+    <!--   <li class="list-group-item ">
+       <a href="http://wsdc.nitw.ac.in/student/registration/register">Provisional Reg</a>
+      </li>-->
+      <li class="list-group-item ">
+       <a href="http://wsdc.nitw.ac.in/student/registration/slip">Registration Slip</a>
+      </li>
+      <li class="list-group-item ">
+       <a href="http://wsdc.nitw.ac.in/student/hostels/wsdc_collect">Upload Payment Receipts</a>
+      </li> 
+ <!-- <li class="list-group-item ">
+       <a href="http://wsdc.nitw.ac.in/student/convocation">Convocation</a> -->
+      </li>
+      <!-- <li class="list-group-item">
+        <span class="collapse-caret collapsed dropdown-toggle" data-toggle="collapse" data-target="#attendance"></span>
+          <div class="list-group-item-wrapper">
+          <a href="#">Attendance</a>
+        </div>
+
+    <div id="attendance" class="collapse in" style="height:auto;">
+          <ul role="menu" class="list-group-item-menu">
+           <li class="list-group-item">
+            <div class="list-group-item-wrapper">
+              <a href="http://wsdc.nitw.ac.in/student/attendance/even_sem14_15">Even  Semester</a>
+            </div>
+          </li> 
+          
+        </ul>
+      </div>
+    </li>-->
+
+     <li class="list-group-item">
+              <a href="http://wsdc.nitw.ac.in/student/attendance">Current Semester Attendance</a>
+          </li>
+    <li class="list-group-item active">
+      <a href="http://wsdc.nitw.ac.in/student/audit/feedback">Course End Feedback</a>
+    </li>
+    <li class="list-group-item ">
+      <a href="http://wsdc.nitw.ac.in/student/audit/exit_feedback">
+       Exit Feedback
+     </a>
+   </li>
+ <li  class=" tips list-group-item text-danger ">
+    <a href="http://wsdc.nitw.ac.in/student/audit/results">
+      Results
+    </a>
+  </li>
+  <!-- <li class="list-group-item">
+    <span class="collapse-caret collapsed dropdown-toggle" data-toggle="collapse" data-target="#registration-slip"></span>
+    <div class="list-group-item-wrapper">
+      <a href="#">Registration Slip</a>
+    </div>
+
+    <div id="registration-slip" class="collapse in" style="height: auto;">
+      <ul role="menu" class="list-group-item-menu">
+        <li class="list-group-item">
+          <div class="list-group-item-wrapper">
+            <a href="http://wsdc.nitw.ac.in/student/audit/slip/even_sem14_15">Even Semester</a>
+          </div>
+        </li>
+        <li class="list-group-item">
+          <div class="list-group-item-wrapper">
+            <a href="http://wsdc.nitw.ac.in/student/audit/slip">Odd Semester</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </li> 
+
+
+  -->
+
+  
+  <li class="list-group-item">
+    <span class="collapse-caret collapsed dropdown-toggle" data-toggle="collapse" data-target="#calendar"></span>
+    <div class="list-group-item-wrapper">
+      <a href="#"> Academic Calendar </a>
+    </div>
+
+    <div id="calendar" class="collapse in" style="height:auto;">
+      <ul role="menu" class="list-group-item-menu">
+
+      <li class="list-group-item">
+        <div class="list-group-item-wrapper">
+          <a target="_blank" href="https://www.nitw.ac.in/media/uploads/2017/05/08/acad_2017-18.pdf">2017-18</a>
+        </div>
+      </li>
+
+      <li class="list-group-item">
+        <div class="list-group-item-wrapper">
+          <a target="_blank" href="https://www.nitw.ac.in/media/uploads/2016/09/29/acad-calendar2016-17.pdf">2016-17</a>
+        </div>
+      </li>
+      </ul>
+    </div>
+</li>
+</ul>
+</div>
+<div class="clearfix visible-xs hidden-print"></div>
+<div class="col-sm-9 col-md-10 main">
+
+<!--Start of Tawk.to Script-->
+<!--
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/568605c754db70e54cd080cb/default';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script> -->
+<!--End of Tawk.to Script--> 
+{% if positive_message %}
+<div class="alert alert-success"><a class="close" data-dismiss="alert" href="#" aria-hidden="true">&times;</a>{{ message }}</div>
+{% elif negative_message %}
+<div class="alert alert-danger"><a class="close" data-dismiss="alert" href="#" aria-hidden="true">&times;</a>{{ message }}</div>
+{% else %}
+<div class="alert alert-info"><a class="close" data-dismiss="alert" href="#" aria-hidden="true">&times;</a>{{ message }}</div>
+{% endif %}
+
+	<div class="notification-container" ng-show="alert.show">
+		<!-- <div class="notification-message">
+			<button type="button" class="close" ng-click="hideAlert()" ><span aria-hidden="true">&times;</span></button>
+			<span class='message'>{{alert.message}}</span>
+		</div> -->
+	</div>
+	<div class="row">
+		<div class="col-xs-12 col-sm-12 col-md-12">
+			
+
+			<div id="tabs">
+				<h4 class="text-primary">
+					<strong>Academic Feedback</strong>
+				</h4>
+				<div class="panel-body">
+					<ul>
+						<li class="text-info"> <strong>Anonymity of feedback is guaranteed</strong>	</li>
+						<li>Only after the academic results are announced, consolidated feedback report will be shared with the faculty. <strong>No student details are stored.</strong></li>
+
+						<li>If any of the lab/theory courses are missing or are extra, please contact WSDC before submitting the feedback</li>
+						<li>All questions are mandatory except comments</li>
+						<li>For assistance, contact <a href="wsdc@student.nitw.ac.in">wsdc@student.nitw.ac.in</a> , WSDC NITW
+						</li>
+
+					</ul>
+					<br>
+				</div>
+				<div>
+										<table  class="table table-striped table-hover table-condensed panel panel-default">
+						<thead>
+							<tr><th style="text-align:center">#</th>
+								<th>COURSE ID</th><th>COURSE NAME</th>
+								<th>FACULTY ALLOTED</th><th style="text-align:center">FEEDBACK</th>
+							</tr>
+						</thead>
+						<tbody>
+
+							{% for registered_course in registered_courses %}
+							<tr {% if registered_course.feedback_status == 0 and can_fill_feedback %} onclick="fillFeedback('{% url 'feedback:fill_feedback' registered_course.course.id %}')"{% endif %}>
+								<td class="text-center">{{ forloop.counter }}</td>
+								<td>{{ registered_course.course.id }}</td>
+								<td>{{ registered_course.course.name }}</td>
+								<td>{{ registered_course.faculty_name }}</td>
+								<!-- <td style="text-align:center;" class="{{detail.text_color}}"><span rel="tooltip" data-placement="left" title="Feedback if({{detail.filled}}==0) submitted" class="glyphicon {{detail.glyphicon}}"></span></td> -->
+								<td>{% if registered_course.feedback_status %} Filled {% else %} Not Filled{% endif %}</td>
+
+							</tr>
+              {% endfor %}
+
+						</tbody>
+					</table>
+									</div>
+			</div>
+			<!-- </div> panel -->
+		</div>  <!-- /col-md-12-->
+	</div><!-- /row inside row -->
+	
+
+</div> <!-- col-lg-8 or 10 -->
+</div>      <!-- main row -->
+<br>
+
+<!-- </div>  container in main/header.php -->
+</div> <!-- container close here -->
+<div class="row hidden-print well footer-well hidden-xs">
+  <div class="container">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+      <!-- <hr> -->
+      <footer>
+        <div class="row">
+        <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+          <strong>Quick Links</strong><br><br>
+          <ul type="square" style="margin-left:-1.5em">
+            <li><a href="http://www.nitw.ac.in" target="_blank">College main website </a></li>
+            <!-- <li><a href="http://www.nitw.ac.in/nitw/index.php/home/index.php?option=com_content&view=article&id=607" target="_blank">Fee structure 2014-15 </a></li> -->
+            <li><a href="http://mail.google.com/a/student.nitw.ac.in" target="_blank">Student Webmail</a></li>
+            <!-- <li><a href="http://www.nitw.ac.in/nitw/index.php?option=com_content&view=article&id=554&amp;Itemid=60" target="_blank">Department Websites</a></li> -->
+            <!-- <li><a href="http://www.nitw.ac.in/nitw/index.php/academics/rules" target="_blank">Rules and regulations</a></li> -->
+          </ul>
+        </div>
+        <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+          <strong>About Us</strong><br><br>
+          <address>
+            WSDC Office, <br>
+            Level 1, Center for Innovation & Incubation <br>
+            NIT Warangal, Telangana - 506004
+          </address>
+          Drop us an email on
+          <a href="mailto:wsdc.nitw@gmail.com">  <span class="glyphicon glyphicon-envelope"></span>  wsdc.nitw@gmail.com</a>
+        </div>
+        <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+          <strong>Follow us on Facebook</strong><br><br>
+          Stay in touch with WSDC, NIT Warangal</br>
+          <div class="fb-like" data-href="https://www.facebook.com/wsdc.nitw" data-layout="button" data-action="like" data-show-faces="false" data-share="true">
+          </div>
+          <br><br>
+          Read more at  <a href="http://wsdc.nitw.ac.in" target="_blank">wsdc.nitw.ac.in <span class="glyphicon glyphicon-new-window"></span></a>
+          <br>
+          <span class="glyphicon glyphicon-copyright-mark"></span> <a class="tips" title="Web & Software Development Cell, NIT Warangal" target="_blank" href="http://wsdc.nitw.ac.in/">2019 WSDC, NIT Warangal </a>
+        </div>
+      </div>
+
+    </footer>
+  </div>
+</div> <!-- footer container close here -->
+</div> <!-- /row with hidden print closes -->
+
+
+<!-- <script type="text/javascript" src="http://wsdc.nitw.ac.in/student/assets/js/jquery-1.11.1.min.js "></script>
+<script type="text/javascript" src="http://wsdc.nitw.ac.in/student/assets/js/bootstrap.min.js "></script> -->
+<!-- <script src=" "></script> -->
+<!--<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.28/angular.min.js" ></script> -->
+
+<!-- <script type="text/javascript" src="http://wsdc.nitw.ac.in/student/assets/js/offcanvas.js "></script>
+
+    <script type="text/javascript" src="http://wsdc.nitw.ac.in/student/assets/js/JavaScriptSpellCheck/include.js"></script>
+        <script type="text/javascript" src="http://wsdc.nitw.ac.in/student/assets/js/notify/bootstrap-notify.js"></script>
+        <script type="text/javascript" src="http://wsdc.nitw.ac.in/student/assets/js/angular/angular.js"></script>
+        <script type="text/javascript" src="http://wsdc.nitw.ac.in/student/assets/js/angular/angular.min.js"></script>
+        <script type="text/javascript" src="http://wsdc.nitw.ac.in/student/assets/js/feedback/feedback.js"></script>
+        <script type="text/javascript" src="http://wsdc.nitw.ac.in/student/assets/js/feedback/alert.js"></script>
+        <script type="text/javascript" src="http://wsdc.nitw.ac.in/student/assets/js/feedback/banInspect.js"></script>
+    <div id="fb-root"></div>
+<script type="text/javascript" src="http://wsdc.nitw.ac.in/student/assets/js/social.js "></script> -->
+</body>
+</html>
+
+<!-- 
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.28/angular.min.js" ></script>
+<script src="http://wsdc.nitw.ac.in/student/assets/js/registration/offcanvas.js"></script>
+<script src="http://wsdc.nitw.ac.in/student/assets/js/registration/constants.js"></script>
+<script src="http://wsdc.nitw.ac.in/student/assets/js/registration/alert.js "></script>
+<script src="http://wsdc.nitw.ac.in/student/assets/js/registration/registration_form.js "></script>
+<script src="http://wsdc.nitw.ac.in/student/assets/js/registration/slips.js"></script>
+<script src="http://wsdc.nitw.ac.in/student/assets/js/registration/intro.min.js"></script>
+<script src="http://wsdc.nitw.ac.in/student/assets/js/slip.js"></script>
+<script src="http://wsdc.nitw.ac.in/student/assets/js/offcanvas.js"></script>
+<script src="http://wsdc.nitw.ac.in/student/assets/js/home.js"></script>
+<script>
+$('#navpop').popover('hide');
+</script>
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-46078676-2', 'nitw.ac.in');
+ga('send', 'pageview');
+</script> -->
+
+<script>
+		function fillFeedback(url){
+			console.log(url);
+			window.location = url;
+		}
+		</script>
